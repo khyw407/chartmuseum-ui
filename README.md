@@ -1,7 +1,3 @@
----
-marp: true
----
-
 ## Custom Chartmuseum-ui
 
  - Dashboard : 현재 존재하는 helm 차트 리스트를 카드형태로 디스플레이
