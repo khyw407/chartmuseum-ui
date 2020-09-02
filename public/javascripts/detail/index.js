@@ -32,6 +32,11 @@ const handleDeleteAllButton = async (e) => {
     rtnStatus.deleted ? alert("정상적으로 삭제처리 되었습니다.") : alert("삭제중 문제가 발생하였습니다.");
 };
 
+const handleThCheckBox = (e) => {
+    let isChecked = $(e.target).prop('checked');
+    $( 'input.form-check-input' ).prop( 'checked', isChecked)
+};
+
 const bindDetailList = async () => {
     let name = $('#details').attr('name');
     let chartList = await $.ajax({
@@ -63,5 +68,6 @@ const bindDetailList = async () => {
 
 $(async () => {
     $('#btnMultiDelete').on('click', handleDeleteAllButton);
+    $('#chkAll').on('click', handleThCheckBox);
     await bindDetailList();
 });
