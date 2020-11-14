@@ -7,8 +7,8 @@ const handleDeleteButton = async (e) => {
         dataType: 'json',
         timeout: 60000,
     });
-    await bindDetailList();
     rtnStatus.deleted ? alert("정상적으로 삭제처리 되었습니다.") : alert("삭제중 문제가 발생하였습니다.");
+    await bindDetailList();
 };
 
 const handleDeleteAllButton = async (e) => {
@@ -28,8 +28,8 @@ const handleDeleteAllButton = async (e) => {
         
         if(!rtnStatus.deleted) break;
     }
-    await bindDetailList();
     rtnStatus.deleted ? alert("정상적으로 삭제처리 되었습니다.") : alert("삭제중 문제가 발생하였습니다.");
+    await bindDetailList();
 };
 
 const handleThCheckBox = (e) => {
