@@ -46,6 +46,12 @@ const bindDetailList = async () => {
         timeout: 60000,
     });
 
+    let typeCheck = Array.isArray(chartList);
+
+    if(!typeCheck) {
+        window.location.assign(`${window.location.origin}/`);
+    }
+
     $('#details > *').detach();
     let html = ``;
     chartList.forEach((el) => {
